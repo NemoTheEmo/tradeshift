@@ -1,5 +1,7 @@
 # tradeshift triangle calculator
 
+(quick note: the indentation looks very weird here in github, but is normal (4 spaces = 1 tab) locally in Sublime. Please overlook it)
+
 This project is setup from an old angularJS seed project. Normally I would have made this using Angular 6 and Typescript, but since I just bought a new computer, which doesn't have any development-related things set-up yet, I decided on going with angularJS, as I don't have time to mess around trying to find an IDE with correct syntax highlighting etc. for ES6 and TS.
 
 The app exposes one simple component called calculator, which has a partial with 3 number inputs and a submit button. The pressing the button passes the 3 provided values to a "calculateTriangleType" function which binds a string displaying which type of triangle the user provided.
