@@ -1,0 +1,50 @@
+<h1>Nemo's Amazing triangle calculator!<h1>
+
+<h3>Please provide 3 side lengths that makes up a triangle<h3>
+
+<form data-ts="triangle"
+	  name="triangleForm">
+	<fieldset class="__margin-bottom">
+		<label>
+			<span>Side 1</span>
+			<input type="number"
+				   ng-model="triangleSides.sideA"
+				   required>
+			</input>				
+		</label>
+	</fieldset>
+	<fieldset class="__margin-bottom">
+		<label>
+			<span>Side 2</span>
+			<input type="number"
+				   ng-model="triangleSides.sideB"
+				   required>
+			</input>
+		</label>
+	</fieldset>
+	<fieldset class="__margin-bottom">
+		<label>
+			<span>Side 3</span>
+			<input type="number"
+				   ng-model="triangleSides.sideC"
+				   required>
+			</input>
+		</label>
+	</fieldset>
+
+	<button data-ts="Button"
+			type="submit"
+			ng-disabled="triangleForm.$invalid"
+	        class="ts-primary"
+	        ng-click="calculateTriangleType(triangleSides.sideA, triangleSides.sideB, triangleSides.sideC)">
+		<span>Show me the kind of triangle!</span>
+	</button>
+	<button data-ts="Button"
+	        class="ts-secondary"
+	        ng-disabled="!triangleSides.sideA && !triangleSides.sideB && !triangleSides.sideC"
+	        ng-click="resetInput()">
+		<span>Reset</span>
+	</button>
+</form>
+
+<h1 ng-if="triangleType"> Your triangle is of type {{triangleType}}!</h1>
